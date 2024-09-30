@@ -26,7 +26,7 @@ for index, row in df.iterrows():
     print("------------------------------------------------")
     print(f"Processing prompt {index+1}/{len(df)}: {prompt_text}")
     result = ollama.generate(
-        model="llama3.1:70b",
+        model="llama3.1:70b", #LLM 모델 "llama3.1:70b" 사용
         prompt=f"-{prompt_text}-\d"
         f"Write a Python function that performs the required task based on the provided description. The code should not include any comments, explanations, print statements, or examples. Provide only the function code, nothing else, and please return only one Python code block."
 
